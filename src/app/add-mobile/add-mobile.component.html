@@ -1,0 +1,54 @@
+<div class="text-end">
+    <span (click)="onNoClick()" class="px-1"><mat-icon>highlight_off</mat-icon></span>
+  </div>
+  <div>
+    <h5 class="add-user text-center mt-3 fs-4">{{this.editdata ? 'Edit Product' : 'Add Product'}}</h5>
+  </div>
+
+  <form [formGroup]="mobileform" (ngSubmit)="submit()" class="bordered">    
+    <mat-dialog-content class="mat-typography">
+        <mat-form-field appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input formControlName="user" matInput placeholder="Enter The User Name" type="text"/>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Brand Name</mat-label>
+            <mat-select formControlName="brand" placeholder="Select The Brand">
+                <mat-option [value]="mobiles" *ngFor="let mobiles of Allmobiles">{{mobiles.name}}</mat-option>               
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Date of Purchase</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date">
+            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Mobile Look</mat-label>
+            <mat-select formControlName="look" placeholder="Select How Mobile Looks">
+                <mat-option [value]="looks" *ngFor="let looks of looking">{{looks.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+            <!-- <label id="Mobile look"><h2>Mobile Look</h2></label>
+            <mat-radio-group aria-labelledby="Mobile look" class="example-radio-group" formControlName="look">
+                <mat-radio-button class="example-radio-button" *ngFor="let look of looking" [value]="look">
+                    {{look.name}}
+                </mat-radio-button>
+            </mat-radio-group> -->
+            <mat-form-field appearance="outline">
+                <mat-label>Price</mat-label>
+                <input formControlName="price" matInput placeholder="Enter The Price" type="number"/>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Comments</mat-label>
+                <textarea formControlName="comments" matInput placeholder="Any Comments"></textarea>
+            </mat-form-field>
+    </mat-dialog-content>
+    
+    <mat-dialog-actions align="end">
+        <button mat-raised-button mat-dialog-close color="primary">Cancel</button>
+        <button mat-raised-button color="accent" type="submit" [disabled]="mobileform.invalid">{{this.editdata ? 'Update' : 'Add'}}</button>
+         <!-- <button mat-raised-button color="accent" type="submit">Save</button> -->
+    </mat-dialog-actions>
+</form>
