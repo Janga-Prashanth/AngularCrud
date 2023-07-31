@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';         //inject to know what value does MAT_DIALOG_DATA holding
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';     //to use reactive form module
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';   //for performing closed,opened etc actions of dialog box 
-//mat_dialog_data is to catch the edit data
+//mat_dialog_data is to catch the edited data
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -72,12 +72,15 @@ export class AddMobileComponent implements OnInit {
     this.mobileform.get('id')?.setValue(this.editdata.id);
     this.mobileform.get('user')?.setValue(this.editdata.user);
     // this.mobileform.controls['user'].setValue(this.editdata.user)
-    this.mobileform.get(['brand','id'])?.setValue(this.editdata.brand.id);
+    this.mobileform.get(['brand','name'])?.setValue(this.editdata.brand.name);
     this.mobileform.get('date')?.setValue(this.editdata.date);
     this.mobileform.get('price')?.setValue(this.editdata.price);
-    this.mobileform.get(['look', 'id'])?.setValue(this.editdata.look.id);
+    this.mobileform.get(['look', 'name'])?.setValue(this.editdata.look.name);
     this.mobileform.get('comments')?.setValue(this.editdata.comments);
   }
+
+  // name1=this.mobileform.get('user');
+  // this.mobileform.get('id')?.setValue(this.editdata.id);
 
   upadateproduct() {
     this.api.updateproduct(this.editdata.id, this.mobileform.value).subscribe(
