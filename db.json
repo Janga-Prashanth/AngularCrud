@@ -1,88 +1,38 @@
 {
   "MyMobiles": [
     {
-      "id": 1,
-      "user": "Janga Prashanth",
-      "brand": {
-        "id": 2,
-        "name": "Apple"
-      },
-      "date": "2023-06-27T18:30:00.000Z",
-      "look": {
-        "id": 3,
-        "name": "Average"
-      },
-      "price": 1111,
-      "comments": "Hammayya"
+      "user": "Jpr",
+      "brand": "Realme",
+      "date": "2024-07-16T23:00:00.000Z",
+      "look": "Damaged",
+      "price": 11,
+      "comments": "Its Alright I say",
+      "id": "542f"
     },
     {
-      "id": 3,
-      "user": "ara ara",
-      "brand": {
-        "id": 4,
-        "name": "Samsung"
-      },
-      "date": "2023-06-07T18:30:00.000Z",
-      "look": {
-        "id": 4,
-        "name": "Damaged"
-      },
-      "price": 3333,
-      "comments": "sayonara"
+      "user": "Prashanth",
+      "brand": "Realme",
+      "date": "2024-07-10T23:00:00.000Z",
+      "look": "Good",
+      "price": 1156,
+      "comments": "Everything good",
+      "id": "bfb7"
     }
   ],
-
   "mobilename": [
-    {
-      "id": 1,
-      "name": "Xiomi"
-    },
-    {
-      "id": 2,
-      "name": "Apple"
-    },
-    {
-      "id": 3,
-      "name": "Realme"
-    },
-    {
-      "id": 4,
-      "name": "Samsung"
-    },
-    {
-      "id": 5,
-      "name": "Nothing"
-    },
-    {
-      "id": 6,
-      "name": "Nokia"
-    },
-    {
-      "id": 7,
-      "name": "Google-Pixel"
-    },
-    {
-      "id": 8,
-      "name": "Others"
-    }
+    "Xiomi",
+    "Apple",
+    "Realme",
+    "Samsung",
+    "Nothing",
+    "Nokia",
+    "Google-Pixel",
+    "Others"
   ],
-
   "mobilelook": [
-    {
-      "id": 1,
-      "name": "New"
-    },
-    {
-      "id": 2,
-      "name": "Good"
-    },
-    {
-      "id": 3,
-      "name": "Average"
-    },
-    {
-      "id": 4,
-      "name": "Damaged"
-    }
+    "New",
+    "Good",
+    "Average",
+    "Damaged"
   ]
 }

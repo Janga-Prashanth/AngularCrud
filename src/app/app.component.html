@@ -23,12 +23,11 @@
     <tbody>
       <tr *ngFor="let product of allproducts">
         <td>{{product.user}}</td>
-        <td>{{product.brand.name}}</td>
+        <td>{{product.brand}}</td>
         <td>{{product.date | date}}</td>
-        <td>{{product.look.name}}</td>
+        <td>{{product.look}}</td>
         <td>{{product.price | currency}}</td>
         <td>{{product.comments}} </td>
-        <td>
           <section>
             <mat-icon color="primary" (click)="editproduct(product)" class="me-2">edit</mat-icon>
             <mat-icon color="warn" (click)="deleteproduct(product.id)">delete</mat-icon>

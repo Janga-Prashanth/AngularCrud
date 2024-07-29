@@ -14,7 +14,7 @@
         <mat-form-field appearance="outline">
             <mat-label>Brand Name</mat-label>
             <mat-select formControlName="brand" placeholder="Select The Brand">
-                <mat-option [value]="mobiles" *ngFor="let mobiles of Allmobiles">{{mobiles.name}}</mat-option>               
+                <mat-option [value]="mobiles" *ngFor="let mobiles of Allmobiles">{{mobiles}}</mat-option>               
             </mat-select>
         </mat-form-field>
         <mat-form-field appearance="fill">
@@ -27,7 +27,7 @@
         <mat-form-field appearance="outline">
             <mat-label>Mobile Look</mat-label>
             <mat-select formControlName="look" placeholder="Select How Mobile Looks">
-                <mat-option [value]="looks" *ngFor="let looks of looking">{{looks.name}}</mat-option>
+                <mat-option [value]="looks" *ngFor="let looks of looking">{{looks}}</mat-option>
             </mat-select>
         </mat-form-field>
             <!-- <label id="Mobile look"><h2>Mobile Look</h2></label>

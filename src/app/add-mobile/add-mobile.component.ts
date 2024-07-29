@@ -34,7 +34,6 @@ export class AddMobileComponent implements OnInit {
 
   initUserForm(): void {
     this.mobileform = this.fb.group({
-      id: [],
       user: [null, [Validators.required]],
       brand: [null, [Validators.required]],
       date: [null, [Validators.required]],
@@ -72,10 +71,10 @@ export class AddMobileComponent implements OnInit {
     this.mobileform.get('id')?.setValue(this.editdata.id);
     this.mobileform.get('user')?.setValue(this.editdata.user);
     // this.mobileform.controls['user'].setValue(this.editdata.user)
-    this.mobileform.get(['brand','name'])?.setValue(this.editdata.brand.name);
+    this.mobileform.get('brand')?.setValue(this.editdata.brand);
     this.mobileform.get('date')?.setValue(this.editdata.date);
     this.mobileform.get('price')?.setValue(this.editdata.price);
-    this.mobileform.get(['look', 'name'])?.setValue(this.editdata.look.name);
+    this.mobileform.get('look')?.setValue(this.editdata.look);
     this.mobileform.get('comments')?.setValue(this.editdata.comments);
   }
 

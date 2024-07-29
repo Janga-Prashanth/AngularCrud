@@ -46,7 +46,7 @@ export class AppComponent implements OnInit{
     });
     dialogRef1.afterClosed().subscribe(val=>{
       if(val == 'save'){
-        this.getallproducts();  
+        this.getallproducts();
       }
     })
   }
